@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+        <script src="javascript/javascript.js" type="text/javascript">
+        </script>
+        <title>Snakes And Ladders</title>
+    </head>
+    <body>
+        <div class="grid-container">
+            <header>
+                <h1 id="heading"><img src="heading-resize.png"></h1>
+            </header>
+            <nav>
+                <ul>
+                    <button id="start-button" onclick=newGame()>New Game</button>
+                    <button onclick="location.href='https://google.com';">Exit</button>
+                </ul>
+            </nav>
+            <main>
+                <div id="back-image">
+                </div>
+                <p id="turn-teller"></p>
+                <div class="board">
+                    <img src="./sandl.png" id="game-image">
+                    <div id="game">
+                        <div id="player-1"></div>
+                        <div id="player-2"></div>
+                    </div>
+                    <div id="dice">
+                        <button onclick=diceRoll()>ROLL</button>
+                        <p id="roll-result"><img id="temp-image" src="dice1.png"></p>
+                    </div>
+                </div>
+                <div id="winner"></div>
+            </main>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    height:100%;
+}
+.grid-container{
+    width:100%;
+    height:100%;
+    grid-template-areas: "head"
+                        "nav"
+                        "main";
+}
+header{
+    grid-area: head;
+    background-color:black;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:20%;
+}
+header img{
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    width:50%;
+    height:40%;
+    border: 1px solid black;
+}
+nav{
+    grid-area:nav;
+    height:10%;
+    background-color:rgb(67, 207, 67);
+}
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:space-around;
+    align-items: stretch;
+    width:100%;
+    height:100%;
+}
+nav ul button{
+    height: 100%;
+    border:none;
+    background-color:rgb(67, 207, 67);
+    color:white;
+    font-size:15px;
+    width:50%;
+    transition-duration: 200ms;
+}
+nav ul button:hover{
+    background-color:white;
+    color:black;
+}
+main{
+    grid-area:main;
+    min-height:100%;
+    width:100%;
+} 
+#back-image{
+    position: absolute;
+    min-height:700px;
+    width:100%;
+    background-image: url('background(1).png');
+    background-size: cover;
+    background-repeat: repeat-y;
+    z-index:-10;
+    filter: blur(3px);
+}
+#menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    position: relative;
+}
+.no-of-players{
+    color:white;
+    background-color:black;
+    width:30%;
+    height:10%;
+    border:5px solid white;
+    border-radius:50%;
+    margin:2% 0;
+}
+#turn-teller{
+    padding-top: 3%;
+    text-align:center;
+    font-size:30px;
+    color:rgb(255, 255, 255);
+}
+.board{
+    position:relative;
+    margin:auto;
+    width:35vw;
+    height:35vw;
+}
+.board button{
+    width: 100%;
+    height:100%;
+    margin:auto;
+    font-size:15px;
+}
+#game{
+    flex-wrap:wrap-reverse;
+    align-items: flex-start;
+    height:100%;
+    width:100%;
+    display:none;
+    position:relative;
+}
+#game-image{
+    position: absolute;
+    display:none;
+    width:100%;
+    height: 100%;
+    z-index:-1;
+}
+#dice button{
+    width:50%;
+    font-size:15px;
+}
+#dice p{
+    width:50%;
+    padding-left:10%;
+    border:none;
+}
+#dice{
+    position:relative;
+    display:none;
+    width:100%;
+    height:10%;
+}
+#temp-image{
+    width:5vw;
+    height:5vw;
+    border:0;
+    text-decoration:none;
+    outline:none;
+}
+.box-attributes{
+    width:10%;
+    height:10%;
+}
+#player-1{
+    position: absolute;
+    width:5%;
+    height:5%;
+    border-radius: 50%;
+    background-color: blue;
+    z-index:0;
+} 
+#player-2{
+    position: absolute;
+    width:5%;
+    height:5%;
+    border-radius: 50%;
+    background-color: red;
+    z-index:0;
+}
+#winner{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 10%;
+    color: white;
+    font-weight: bolder;
+}
+#simple-text{
+    margin-top:5%;
+    color:rgb(14, 1, 1);
+    text-align:center;
+    font-size:40px;
+}
